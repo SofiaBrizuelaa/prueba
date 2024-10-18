@@ -2,14 +2,38 @@ let estado;
 let textos = [];
 let botonA = [];
 let botonB = [];
+let imagenes = []; // Array de imágenes
+
+function preload() {
+  // Cargar imágenes en el array
+  imagenes[0] = loadImage('data/imagen_00.png');
+  imagenes[1] = loadImage('data/imagen_01.png'); 
+  imagenes[2] = loadImage('data/imagen_02.png'); 
+  imagenes[3] = loadImage('data/imagen_03.png');
+  imagenes[4] = loadImage('data/imagen_04.png');
+  imagenes[5] = loadImage('data/imagen_05.png');
+  imagenes[6] = loadImage('data/imagen_06.png');
+  imagenes[7] = loadImage('data/imagen_07.png');
+  imagenes[8] = loadImage('data/imagen_08.png');
+  imagenes[9] = loadImage('data/imagen_09.png');
+  imagenes[10] = loadImage('data/imagen_10.png');
+  imagenes[11] = loadImage('data/imagen_11.png');
+  imagenes[12] = loadImage('data/imagen_12.png');
+  imagenes[13] = loadImage('data/imagen_13.png');
+  imagenes[14] = loadImage('data/imagen_14.png');
+  imagenes[15] = loadImage('data/imagen_15.png');
+  imagenes[100] = loadImage('data/imagen_16.png'); 
+ 
+}
 
 function setup() {
-createCanvas(640, 480);
+  createCanvas(640, 480);
   inicializar();
 }
 
-
 function draw() {
+  image(imagenes[estado], 0, 0, width, height);
+
   if (estado === 0) {
     pantallaInicio();
   } else if ( estado === 100) {
